@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Email";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+
+<h2 class="custom-page-header">Email</h2>
+</div>
+
+
+@using (Html.BeginForm("Login", "Email", FormMethod.Post))
+{
+    
+<input id="emailTo" name="emailTo" type="text" value="To" class="input-group-lg"/><br />
+<input id="emailFrom" name="emailFrom" type="text" value="From" class="input-group-lg" /><br />
+<input id="emailSubject" name="emailSubject" type="text" value="Subject" class="input-group-lg"/><br />
+<input id="emailBody" name="emailBody" type="text" value="Email Body" class="input-group-lg" /><br />
+    <input type="submit" value="Login" />
+//<button id="emailSendButton" class="btn-group-lg">@Html.ActionLink("Send","Login", "Email")</button>
+    
+}
